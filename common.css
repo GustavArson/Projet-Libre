@@ -1,7 +1,0 @@
-.Button {
-    display: none;
-}
-
-.Bloc_Nav :hover .Button {
-    display: block;
-}
