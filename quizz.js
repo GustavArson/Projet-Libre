@@ -17,45 +17,59 @@ let loose = 0
 console.log(win)
 console.log(loose)
 console.log(question.length)
+document.getElementById("result").innerHTML = ` `
+document.getElementById("win").innerHTML = ` `
+document.getElementById("loose").innerHTML = ` `
 
-alert(`Les règles sont simples : Vous avez ${question.length} questions qui vont vous être posées. Si vous répondez juste, vous gagnez un point, sinon vous ne gagnez pas de point. Le but est d'avoir au minimum ${parseInt((question.length + 1)/2)} points. Si vous avez la moyenne, vous débloquez le badge du meilleur weebo de la planète. Si vous n'avez pas la moyenne vous êtes tous simplement "une merde" 
+let finGame = false
+let check = false
+
+let button = document.querySelector('button');
+button.onclick = function() {
+    alert(`Les règles sont simples : Vous avez ${question.length} questions qui vont vous être posées. Si vous répondez juste, vous gagnez un point, sinon vous ne gagnez pas de point. Le but est d'avoir au minimum ${parseInt((question.length + 1)/2)} points. Si vous avez la moyenne, vous débloquez le badge du meilleur weebo de la planète. Si vous n'avez pas la moyenne vous êtes tous simplement "une merde" 
 Appuyez sur OK pour continuer`)
+    check = true
+    console.log(check)
 
-let finGame = true
-
-while (finGame === false) {
-    for (let i = 0; i < question.length; i++) {
-        console.log(i)
-        const prompt = window.prompt(`Question ${question[i].id}: ${question[i].question}`)
-        if (i < question.length - 1) {
-            if (prompt == question[i].reponse) {
-                win++
-                alert("Réponse juste bravo !")
+    while (finGame === false && check === true) {
+        for (let i = 0; i < question.length; i++) {
+            console.log(i)
+            const prompt = window.prompt(`Question ${question[i].id}: ${question[i].question}`)
+            if (i < question.length - 1) {
+                if (prompt == question[i].reponse) {
+                    win++
+                    alert("Réponse juste bravo !")
+                } else {
+                    loose++
+                    alert("Réponse fausse, vous n'etes pas un vrai kawaii weebo")
+                }
             } else {
-                loose++
-                alert("Réponse fausse, vous n'etes pas un vrai kawaii weebo")
-            }
-        } else {
-            if (prompt == question[i].reponse) {
-                win++
-                alert("Réponse juste bravo !")
-                finGame = true
-                console.log("Fin du jeu")
-            } else {
-                loose++
-                alert("Réponse fausse, vous n'etes pas un vrai kawaii weebo")
-                finGame = true
-                console.log("Fin du jeu")
+                if (prompt == question[i].reponse) {
+                    win++
+                    alert("Réponse juste bravo !")
+                    finGame = true
+                    console.log("Fin du jeu")
+                } else {
+                    loose++
+                    alert("Réponse fausse, vous n'etes pas un vrai kawaii weebo")
+                    finGame = true
+                    console.log("Fin du jeu")
+                }
             }
         }
+        console.log(`Votre nombre de win : ${win}`)
+        console.log(`Votre nombre de loose : ${loose}`)
+
     }
-    console.log(`Votre nombre de win : ${win}`)
-    console.log(`Votre nombre de loose : ${loose}`)
 
-}
+    if (win >= loose) {
+        document.getElementById("result").innerHTML = `Vous êtes un gros weebo`
+        document.getElementById("win").innerHTML = `Votre résultat : ${win} win`
+        document.getElementById("loose").innerHTML = ` et ${loose} loose`
+    } else {
+        document.getElementById("result").innerHTML = `Vous êtes une merde`
+        document.getElementById("win").innerHTML = `Votre résultat : ${win} win`
+        document.getElementById("loose").innerHTML = ` et ${loose} loose`
+    }
 
-if (win >= loose) {
-    document.write("<p> Vous êtes un gros weebo </p>")
-} else {
-    document.write("<p> Vous êtes une merde </p>")
-}
+};
