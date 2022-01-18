@@ -1,9 +1,7 @@
-
-
 .Button {
     display: none;
 }
 
-div :hover .Button{
-  display: block; 
+.Bloc_Nav :hover .Button {
+    display: block;
 }

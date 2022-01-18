@@ -3,6 +3,12 @@
     padding: 0px;
 }
 
+.all-content {
+    width: 75%;
+    margin: auto;
+    background-color: #ccc;
+}
+
 header {
     background-image: url("../image/1495292642.jpg");
     text-align: center;
@@ -77,6 +83,12 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    padding-top: 50px;
 }
 
 header,
