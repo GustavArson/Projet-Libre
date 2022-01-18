@@ -1,3 +1,8 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 header {
     background-image: url("../image/1495292642.jpg");
     text-align: center;
@@ -8,10 +13,6 @@ header {
     font-family: sans-serif;
     height: 20em;
     width: 75%;
-}
-
-.citation {
-    margin-top: 13em;
 }
 
 .Bloc_Nav {
@@ -34,30 +35,35 @@ header {
     justify-content: center;
     height: 3em;
 }
+
 .DB {
     background-image: url("../image/R (12).jpg");
     margin-top: auto;
     margin-bottom: auto;
     height: 3em;
 }
+
 .OP {
     background-image: url("../image/wallpapersden.com_one-piece-team-art_2560x1080.jpg");
     margin-top: auto;
     margin-bottom: auto;
     height: 3em;
 }
+
 .MHA {
     background-image: url("../image/R (15).jpg");
     margin-top: auto;
     margin-bottom: auto;
     height: 3em;
 }
+
 .Bleach {
     background-image: url("../image/R (17).jpg");
     margin-top: auto;
     margin-bottom: auto;
     height: 3em;
 }
+
 .Culture {
     background-image: url("../image/R (10).jpg");
     margin-top: auto;
@@ -68,5 +74,14 @@ header {
 body {
     width: 100%;
     background-image: url("../image/117608l.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-size: 100%;
+}
+
+header,
+div,
+main,
+footer {
+    background-color: #ccc;
 }
