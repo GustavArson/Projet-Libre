@@ -1,0 +1,70 @@
+body {
+    background-color: lightGray;
+}
+
+main {
+    width: 65%;
+    margin: auto;
+}
+
+.titre {
+    text-align: center;
+}
+
+.titre h2 {
+    margin: 5px;
+    font-size: 8rem;
+}
+
+.titre p {
+    font-size: 2rem;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+.citation {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.citation em {
+    font-size: 1.5em;
+}
+
+.clear {
+    clear: both;
+}
+
+.content {
+    margin: 5em;
+    text-align: justify;
+    vertical-align: middle;
+}
+
+.content p {
+    font-size: 1.5em;
+}
+
+.content .img1 {
+    float: left;
+    margin-right: 1.5em;
+}
+
+.content .img2 {
+    float: right;
+    margin-left: 1.5em;
+}
+
+.imgPetite {
+    margin-bottom: 5em;
+}
+
+img {
+    width: 40em;
+}
+
+.lessHeight
+{
+	height: 700px;
+}
