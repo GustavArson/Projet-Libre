@@ -21,7 +21,7 @@ console.log(question.length)
 alert(`Les règles sont simples : Vous avez ${question.length} questions qui vont vous être posées. Si vous répondez juste, vous gagnez un point, sinon vous ne gagnez pas de point. Le but est d'avoir au minimum ${parseInt((question.length + 1)/2)} points. Si vous avez la moyenne, vous débloquez le badge du meilleur weebo de la planète. Si vous n'avez pas la moyenne vous êtes tous simplement "une merde" 
 Appuyez sur OK pour continuer`)
 
-let finGame = false
+let finGame = true
 
 while (finGame === false) {
     for (let i = 0; i < question.length; i++) {
@@ -52,4 +52,10 @@ while (finGame === false) {
     console.log(`Votre nombre de win : ${win}`)
     console.log(`Votre nombre de loose : ${loose}`)
 
+}
+
+if (win >= loose) {
+    document.write("<p> Vous êtes un gros weebo </p>")
+} else {
+    document.write("<p> Vous êtes une merde </p>")
 }
